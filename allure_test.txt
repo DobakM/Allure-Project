@@ -1,0 +1,47 @@
+import pytest
+import allure
+import requests
+import allure_engine as engine
+
+@allure.title("Title-1")
+@allure.label("Owner-1")
+@allure.tag("Tag-1")
+@allure.description("Description-1")
+@allure.testcase("TMS-456")
+@allure.issue("AUTH-123")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.link("https://jsonplaceholder.typicode.com/posts", name="Name-1")
+def test_assert():
+    assert engine.discount(100, 50) == 50.0
+
+@allure.title("Title-2")
+@allure.label("Owner-2")
+@allure.tag("Tag-2")
+@allure.description("Description-2")
+@allure.testcase("TMS-457")
+@allure.issue("AUTH-124")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.link("https://jsonplaceholder.typicode.com/posts", name="Name-2")
+def test_post():
+    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    assert response.status_code == 200
+
+@allure.title("Title-3")
+@allure.label("Owner-3")
+@allure.tag("Tag-3")
+@allure.description("Description-3")
+@allure.testcase("TMS-458")
+@allure.issue("AUTH-125")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.link("https://jsonplaceholder.typicode.com/posts", name="Name-3")
+def test_post_length():
+    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    assert len(response.json()) == 100
+    
+'''
+Therminal:
+    
+PS C:\Users\User> cd ..\..\Dobak\Oktatás\Codecool\"Python Best Practices" 
+PS C:\Dobak\Oktatás\Codecool\Python Best Practices> python -m pytest allure_test.py --alluredir allure-results
+PS C:\Dobak\Oktatás\Codecool\Python Best Practices> allure serve allure-results
+'''

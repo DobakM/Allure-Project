@@ -1,0 +1,55 @@
+0. 
+
+- C:\Users\User>pip list
+
+1. 
+
+- C:\Users\User>pip install pytest
+
+2.
+
+- download allure-2.32.0.zip (https://github.com/allure-framework/allure2/releases/tag/2.32.0)
+- unzip allure-2.32.0.zip
+- move directory to C:\Users\User\AppData\Local\Packages\allure-2.32.0
+
+3.
+
+- C:\Users\User>pip install allure-pytest
+
+4.
+- Rendszer Tulajdonságai
+	- Környezeti változók ...
+		- User felhasználói változók
+			- Path
+				- Új
+					- C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts
+					- C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts
+					- C:\Users\User\AppData\Local\Packages\allure-2.32.0\bin
+
+		- User felhasználói változók
+			- Path
+				- Új
+					- C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts
+					- C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts
+					- C:\Users\User\AppData\Local\Packages\allure-2.32.0\bin
+5.
+
+Create python files (allure_engine.py, allure_test.py)
+
+6.
+
+Select directory of python files:
+
+C:\Users\User>cd ..\..\Dobak\Oktatás\Codecool\Python Test Project\
+
+7.
+
+Visual Code Therminal/DOS:
+
+C:\Dobak\Oktatás\Codecool\Python Test Project>python -m pytest allure_test.py --alluredir allure-results
+
+8.
+
+Visual Code Therminal/DOS:
+
+C:\Dobak\Oktatás\Codecool\Python Test Project>allure serve allure-results
