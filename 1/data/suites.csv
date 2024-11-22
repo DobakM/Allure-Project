@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Nov 22 11:58:10 GMT 2024","Fri Nov 22 11:58:10 GMT 2024","31","","allure_test","","","","title","description"
+"passed","Fri Nov 22 11:58:10 GMT 2024","Fri Nov 22 11:58:10 GMT 2024","0","","allure_test","","","","title","description"
+"passed","Fri Nov 22 11:58:10 GMT 2024","Fri Nov 22 11:58:10 GMT 2024","53","","allure_test","","","","title","description"
